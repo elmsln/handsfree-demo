@@ -1,6 +1,5 @@
 #!/bin/bash
 # This is pretty evil but it makes sure our demo is completely destroyed
-
 # drop elmsln
 rm -rf /var/www/elmsln
 # reinstall mysql to empty it
@@ -27,3 +26,10 @@ bash /var/www/elmsln/scripts/install/elmsln-install.sh
 # restart apache / mysql just for fun
 /etc/init.d/httpd restart
 /etc/init.d/mysqld restart
+
+
+# now we need to run our standard drush commands to unify the UX on this
+# while being secure which means we don't want to actually give people admin
+# we want to switch the admin user's password to something else
+# then we want to create a user account for a staff member
+# spider it everywhere so they can do anything, and then we need to test

@@ -3,12 +3,16 @@ This is a modified version of elmsln's one-line "handsfree" installer that's seg
 
 This was created because of the dangerous nature of giving someone a certain level of access account to ones system that can automatically produce websites. This is useful for demonstration purposes only.
 
+Ensure you are root before applying these. No warrentee here is obvious.
+
 Here's an example of how you can use this to setup a server that kills itself daily
 ```
+sudo -i
 yes | yum -y install git && git clone https://github.com/elmsln/handsfree-demo.git /var/www/handsfree-demo && bash /var/www/handsfree-demo/scripts/install.sh centos elmsln ln elmsln.dev http day
 ```
 
 Here's an example of how you can use this to setup a server that kills itself weekly
 ```
+sudo -i
 yes | yum -y install git && git clone https://github.com/elmsln/handsfree-demo.git /var/www/handsfree-demo && bash /var/www/handsfree-demo/scripts/install.sh amazon elmsln ln elmsln.dev http week
 ```

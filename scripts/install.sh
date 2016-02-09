@@ -12,3 +12,5 @@ git clone https://github.com/elmsln/elmsln.git /var/www/elmsln && bash /var/www/
 # modify cron to apply the script that kills itself nightly
 # make it configurable based on arg $6
 bash crontab.sh $6
+# perform clean up tasks as far as user accounts to create and what not for the standard User experience
+bash /var/www/handsfree-demo/scripts/cleanup.sh

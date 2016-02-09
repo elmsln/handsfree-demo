@@ -33,3 +33,4 @@ bash /var/www/elmsln/scripts/install/elmsln-install.sh
 # we want to switch the admin user's password to something else
 # then we want to create a user account for a staff member
 # spider it everywhere so they can do anything, and then we need to test
+bash /var/www/handsfree-demo/scripts/cleanup.sh

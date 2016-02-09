@@ -3,7 +3,7 @@
 # This is pretty evil but it makes sure our demo is completely destroyed
 
 # move cfg to a safe place
-cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /tmp/config.cfg# drop elmsln
+cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /tmp/config.cfg
 
 # reinstall mysql to empty it
 /etc/init.d/mysqld stop

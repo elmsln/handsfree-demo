@@ -5,10 +5,10 @@ This was created because of the dangerous nature of giving someone a certain lev
 
 Here's an example of how you can use this to setup a server that kills itself daily
 ```
-yes | yum -y install git && git clone https://github.com/elmsln/handsfree-demo.git /var/www/handsfree-demo && bash /var/www/handsfree-demo/scripts/install.sh elmsln ln elmsln.dev http day
+yes | yum -y install git && git clone https://github.com/elmsln/handsfree-demo.git /var/www/handsfree-demo && bash /var/www/handsfree-demo/scripts/install.sh centos elmsln ln elmsln.dev http day
 ```
 
 Here's an example of how you can use this to setup a server that kills itself weekly
 ```
-yes | yum -y install git && git clone https://github.com/elmsln/handsfree-demo.git /var/www/handsfree-demo && bash /var/www/handsfree-demo/scripts/install.sh elmsln ln elmsln.dev http week
+yes | yum -y install git && git clone https://github.com/elmsln/handsfree-demo.git /var/www/handsfree-demo && bash /var/www/handsfree-demo/scripts/install.sh amazon elmsln ln elmsln.dev http week
 ```

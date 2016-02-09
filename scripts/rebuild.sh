@@ -1,4 +1,5 @@
 #!/bin/bash
+# todo add support for ubuntu/deb based demo systems
 # This is pretty evil but it makes sure our demo is completely destroyed
 # drop elmsln
 rm -rf /var/www/elmsln
@@ -26,7 +27,6 @@ bash /var/www/elmsln/scripts/install/elmsln-install.sh
 # restart apache / mysql just for fun
 /etc/init.d/httpd restart
 /etc/init.d/mysqld restart
-
 
 # now we need to run our standard drush commands to unify the UX on this
 # while being secure which means we don't want to actually give people admin

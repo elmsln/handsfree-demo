@@ -22,4 +22,4 @@ drush @elmsln ucrt student --mail=student@elmsln.dev --y ; drush @elmsln urol st
 # ensure the module exists since this directory gets rebuilt all the time
 cp -R /var/www/handsfree-demo/modules/ /var/www/elmsln/config/shared/drupal-7.x/modules/contrib/
 # enable the module
-d @online en handsfree_demo --y
+drush @online en handsfree_demo --y

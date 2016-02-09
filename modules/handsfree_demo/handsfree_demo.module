@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Modifications to the default build routine for vagrant development
+ */
+
+/**
+ * Implements hook_cis_service_instance_job_file_alter().
+ */
+function handsfree_demo_cis_service_instance_job_file_alter(&$content, $course, $service, $service_instance) {
+  // force these to fire last and automatically create a student role on install
+  $content .= 'drush ucrt student --mail=student@elmsln.dev' . "\n";
+  $content .= 'drush urol student student' . "\n";
+}

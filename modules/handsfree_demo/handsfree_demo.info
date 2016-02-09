@@ -1,0 +1,6 @@
+; $Id: handsfree_demo.info
+name = "Handsfree Demo modifications"
+description = "Development build routine stuff"
+package = "Handsfree"
+dependencies[] = cis_helper
+core = "7.x"

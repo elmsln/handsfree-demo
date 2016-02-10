@@ -17,7 +17,8 @@ else
   yes | yum update
 fi
 git clone https://github.com/elmsln/elmsln.git /var/www/elmsln && bash /var/www/elmsln/scripts/install/handsfree/$1/$1-install.sh $2 $3 $4 $5 admin@elmsln.dev no
-
+# make it executable
+chmod 744 /var/www/handsfree-demo/scripts/*
 # modify cron to apply the script that kills itself nightly
 # make it configurable based on arg $6
 bash /var/www/handsfree-demo/scripts/crontab.sh $6

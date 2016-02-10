@@ -16,9 +16,11 @@ done
 # set the admin password to something no one knows
 drush @elmsln upwd admin --password=$pass --y
 # staff user account with password of staff
-drush @elmsln ucrt staff --mail=staff@elmsln.dev --y ; drush @elmsln urol staff staff --y
+drush @elmsln ucrt staff --mail=staff@elmsln.dev --password=staff --y
+drush @elmsln urol staff staff --y
 # student user account with password student
-drush @elmsln ucrt student --mail=student@elmsln.dev --y ; drush @elmsln urol student student --y
+drush @elmsln ucrt student --mail=student@elmsln.dev --password=student --y
+drush @elmsln urol student student --y
 # ensure the module exists since this directory gets rebuilt all the time
 cp -R /var/www/handsfree-demo/modules/ /var/www/elmsln/config/shared/drupal-7.x/modules/contrib/
 # enable the module

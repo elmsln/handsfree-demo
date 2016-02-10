@@ -9,8 +9,8 @@
  */
 function handsfree_demo_cis_service_instance_job_file_alter(&$content, $course, $service, $service_instance) {
   // force these to fire last and automatically create a student and staff on install
-  $content .= 'drush ucrt staff --mail=staff@elmsln.dev' . "\n";
+  $content .= 'drush ucrt staff --mail=staff@elmsln.dev --password=staff' . "\n";
   $content .= 'drush urol staff staff' . "\n";
-  $content .= 'drush ucrt student --mail=student@elmsln.dev' . "\n";
+  $content .= 'drush ucrt student --mail=student@elmsln.dev --password=student' . "\n";
   $content .= 'drush urol student student' . "\n";
 }

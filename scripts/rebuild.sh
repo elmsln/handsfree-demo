@@ -7,6 +7,7 @@ cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /tmp/config.cfg
 
 # reinstall mysql to empty it
 /etc/init.d/mysqld stop
+service mysql stop
 killall -9 mysql
 killall -9 mysqld
 yes | yum remove mysql-server mysql-client mysql-common mysql

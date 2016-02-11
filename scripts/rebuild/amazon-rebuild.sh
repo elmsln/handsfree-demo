@@ -6,7 +6,6 @@
 cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /tmp/config.cfg
 
 # reinstall mysql to empty it
-/etc/init.d/mysqld stop
 service mysql stop
 killall -9 mysql
 killall -9 mysqld
@@ -19,7 +18,6 @@ rm -rf /etc/mysql
 
 # install mysql again now that it's completely empty
 yes | yum -y install mysql mysql-server
-/etc/init.d/mysqld restart
 service mysql restart
 
 # blow it awway
@@ -69,8 +67,9 @@ EOF
 # reinstall the system
 bash /var/www/elmsln/scripts/install/elmsln-install.sh
 # restart apache / mysql just for fun
-/etc/init.d/httpd restart
-/etc/init.d/mysqld restart
+service mysql restart
+service httpd restart
+service php5-fpm restart
 
 # now we need to run our standard drush commands to unify the UX on this
 # while being secure which means we don't want to actually give people admin

@@ -4,7 +4,7 @@
 
 # move cfg to a safe place
 cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /tmp/config.cfg
-
+source ~/.bashrc
 # reinstall mysql to empty it
 service mysql stop
 killall -9 mysql
@@ -69,7 +69,7 @@ bash /var/www/elmsln/scripts/install/elmsln-install.sh
 # restart apache / mysql just for fun
 service mysql restart
 service httpd restart
-service php5-fpm restart
+service php-fpm restart
 
 # now we need to run our standard drush commands to unify the UX on this
 # while being secure which means we don't want to actually give people admin

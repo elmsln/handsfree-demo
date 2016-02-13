@@ -21,6 +21,9 @@ drush @elmsln urol staff staff --y
 # student user account with password student
 drush @elmsln ucrt student --mail=student@elmsln.dev --password=student --y
 drush @elmsln urol student student --y
+# force this code base to be self refreshing as well
+cd /var/www/handsfree-demo
+git pull origin master
 # ensure the module exists since this directory gets rebuilt all the time
 cp -R /var/www/handsfree-demo/modules/ /var/www/elmsln/config/shared/drupal-7.x/modules/contrib/
 # enable the module

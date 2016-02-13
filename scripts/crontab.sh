@@ -9,4 +9,5 @@ case "$1" in
       ;;
 esac
 echo "# ELMSLN handsfree-demo rebuild script" >> /etc/crontab
+echo "PATH=/sbin:/bin:/usr/sbin:/usr/bin:/root/.composer/vendor/bin" >> /etc/crontab
 echo "$ct root bash /var/www/handsfree-demo/scripts/rebuild/${2}-rebuild.sh" >> /etc/crontab

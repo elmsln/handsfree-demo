@@ -3,7 +3,7 @@
 # This is pretty evil but it makes sure our demo is completely destroyed
 
 # move cfg to a safe place
-cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /tmp/config.cfg
+cp /var/www/elmsln/config/scripts/drush-create-site/config.cfg /root/config.cfg
 source ~/.bashrc
 # reinstall mysql to empty it
 service mysql stop
@@ -34,7 +34,7 @@ git config core.fileMode false
 git config --global core.filemode false
 git clone https://github.com/elmsln/elmsln-config-example.git config
 # move our temp config gile back into place
-mv /tmp/config.cfg /var/www/elmsln/config/scripts/drush-create-site/config.cfg
+mv /root/config.cfg /var/www/elmsln/config/scripts/drush-create-site/config.cfg
 # source the config setup
 source /var/www/elmsln/config/scripts/drush-create-site/config.cfg
 # make the root user secure again
